@@ -12,11 +12,12 @@ var firebaseConfig = {
     messagingSenderId: "814932710089",
     appId: "1:814932710089:web:e5dff09ef77577844b3318",
     measurementId: "G-H1Z3CGGG9R"
-  };
+};
 
   // Initialize Firebase
   const firebase = Firebase.initializeApp(firebaseConfig);
   const { fieldValue } = Firebase.firestore;
+  console.log(Firebase.firestore);
 
   //Data Dummy / Data Testing
 //   seedDatabase(firebase)

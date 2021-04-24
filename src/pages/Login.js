@@ -1,4 +1,3 @@
-
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import FirebaseContext from '../context/firebase'
@@ -14,7 +13,7 @@ function login() {
 
     const isInvalid = password === '' || email === '';
 
-    const handleLogin = () = {
+    const handleLogin = () => {
 
     }
 
