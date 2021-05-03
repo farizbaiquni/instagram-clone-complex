@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import FirebaseContext from '../context/firebase'
 import * as ROUTES from '../constants/routes'
 import { doesUserNameExist } from '../services/firebase'
-import { set } from 'date-fns';
+// import { set } from 'date-fns';
 
 function login() {
 
