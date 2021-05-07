@@ -10,12 +10,9 @@ function useAuthListener() {
 
         const listener = firebase.auth().onAuthStateChanged((userCredential) => {
             if(userCredential){
-                // console.log("object")
-                console.log(userCredential)
                 localStorage.setItem('userCredential', JSON.stringify(userCredential));
                 setUser(userCredential)
             }else{
-                // console.log("object")
                 localStorage.removeItem('userCredential');
                 setUser(null)
             }
@@ -25,9 +22,7 @@ function useAuthListener() {
 
     }, [firebase])
 
-    // console.log("object")
-
-    return  user 
+    return user 
 }
 
 export default useAuthListener

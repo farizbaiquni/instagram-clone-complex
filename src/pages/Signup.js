@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import FirebaseContext from '../context/firebase'
 import * as ROUTES from '../constants/routes'
 import { doesUserNameExist } from '../services/firebase'
+import Firebase from 'firebase/app'
 // import { set } from 'date-fns';
 
 function login() {
@@ -24,6 +25,7 @@ function login() {
         let usernameExist = await doesUserNameExist(username);
         
         if( usernameExist <= 0){
+            
             try {
 
                 const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -33,11 +35,11 @@ function login() {
                 })
     
                 await firebase.firestore().collection('users').add({
-                    userId: userCredential.user.uId,
+                    userId: userCredential.user.uid,
                     emailAddress: email,
                     username: username,
                     fullName: fullName,
-                    dateCreate: firebase.firestore.FieldValue.serverTimestamp(),
+                    dateCreate: Firebase.firestore.FieldValue.serverTimestamp(),
                     followers: [],
                     following: [],
                 })
@@ -116,7 +118,7 @@ function login() {
                         <button
                             type="submit"
                             disabled={isInvalid}
-                            className={`bg-blue-medium text-white font-bold w-full rounded p-1 ${isInvalid && "opacity-50"}`}
+                            className={`bg-blue-medium text-white font-bold w-full rounded p-1 ${isInvalid && "opacity-50"} `}
                         >SignUp</button>
                     </form>
                 </div>

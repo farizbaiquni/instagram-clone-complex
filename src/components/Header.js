@@ -75,8 +75,8 @@ function Header() {
 
                                  <div className="flex items-center cursor-pointer">
                                      <Link to={`./p/${user?.username}`}>
-                                         <img src={`./images/avatars/${user?.username}`} 
-                                            alt={`${user?.username} profile`} 
+                                         <img src={`./images/avatars/${user?.displayName}.jpg`} 
+                                            alt={`${user?.displayName} profile`} 
                                             className="flex rounded-full w-8 h-8"/>
                                      </Link>
                                  </div>
@@ -87,7 +87,7 @@ function Header() {
                                 <Link to={ROUTES.LOGIN}>
                                     <button 
                                         type="button" 
-                                        className="bg-blue-medium font-bold text-sm rounded text-white w-20 h-8"
+                                        className="bg-blue-medium font-bold text-sm rounded text-white w-20 h-8 mr-3"
                                     >
                                         Login
                                     </button>

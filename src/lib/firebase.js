@@ -17,7 +17,7 @@ var firebaseConfig = {
   // Initialize Firebase
   const firebase = Firebase.initializeApp(firebaseConfig);
   const { fieldValue } = Firebase.firestore;
-  console.log(Firebase.firestore);
+  // console.log(Firebase.firestore);
 
   //Data Dummy / Data Testing
 //   seedDatabase(firebase)
