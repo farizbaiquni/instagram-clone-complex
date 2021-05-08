@@ -4,6 +4,7 @@ import Timeline from '../components/Timeline'
 import Sidebar from '../components/sidebar'
 
 function Dashboard() {
+
     return (
         <div className="bg-gray-background">
             <Header/>

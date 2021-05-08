@@ -18,13 +18,11 @@ function userData() {
             setCurrentUserData(data)
         }
 
-        //Jika terdapat user yang terautentikasi panggil fungsi diatas
         if(userCredential?.uid){
             callFetchFunction()
         }
 
     }, [userCredential]);
-
 
     return currentUserData;
 }

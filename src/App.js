@@ -1,6 +1,6 @@
 import './App.css';
-import React, { lazy, Suspense, useContext } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as ROUTES from './constants/routes';
 import useAuthListener from './hooks/use-auth-listener'
 import UserContext from './context/userContext'

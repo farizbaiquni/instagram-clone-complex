@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Skeleton from 'react-loading-skeleton'
+import * as ROUTES from '../../constants/routes'
 
 function user({username, fullName}) {
     return (
@@ -12,12 +13,12 @@ function user({username, fullName}) {
 
                     <div className="grid grid-cols-4">
                         
-                        <Link className="col-span-1 gap-4">
-                            <img src={`./images/avatars/${username}.jpg`} alt="" className="rounded-full w-16"/>
+                        <Link to={ROUTES.PROFILE} className="col-span-1 gap-4">
+                            <img src={`./images/avatars/${username}.jpg`} alt="" className="rounded-full w-14"/>
                         </Link>
                         
-                        <div className="flex flex-col justify-center bg-red-primary">
-                            <Link className="col-span-3">
+                        <div className="flex flex-col justify-center ml-3">
+                            <Link to={ROUTES.PROFILE} className="col-span-3">
                                 <h3 className="text-sm font-bold">{username}</h3>
                             </Link>
                             <h3>{fullName}</h3>
@@ -29,4 +30,4 @@ function user({username, fullName}) {
     )
 }
 
-export default user
+export default React.memo(user)

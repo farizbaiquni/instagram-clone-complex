@@ -16,7 +16,7 @@ var firebaseConfig = {
 
   // Initialize Firebase
   const firebase = Firebase.initializeApp(firebaseConfig);
-  const { fieldValue } = Firebase.firestore;
+  const fieldValue = Firebase.firestore.FieldValue;
   // console.log(Firebase.firestore);
 
   //Data Dummy / Data Testing
