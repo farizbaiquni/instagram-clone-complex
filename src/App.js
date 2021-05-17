@@ -16,7 +16,7 @@ function App() {
   
   return (
     <UserContext.Provider value={user}>
-      <div className="app">
+      <div className=" app">
         <Router>
           <Suspense fallback={<h3>Loading...</h3>}>
             <Switch>

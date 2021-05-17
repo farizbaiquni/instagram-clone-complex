@@ -9,7 +9,6 @@ function Dashboard() {
         <div className="bg-gray-background">
             <Header/>
             <div className="grid grid-cols-3 mx-auto gap-4 max-w-screen-lg">
-                Dashboards
                 <Timeline />
                 <Sidebar />
             </div>        

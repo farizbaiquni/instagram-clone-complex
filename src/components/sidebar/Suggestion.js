@@ -26,7 +26,7 @@ function Suggestion({authUserId, authDocId, authFollowing}) {
         <div className="flex flex-col p-1 text-sm mt-7 truncate">    
             <div className="flex justify-between items-center w-full mb-2">
                 <div className="flex items-center w-3/5 overflow-hidden">
-                    <h1 className="text-base">Suggested For You</h1>
+                    <h1 className="text-sm font-bold text-gray-base">Suggested For You</h1>
                 </div>
                 <a href="" className="text-sm ml-3">See All</a>
             </div>

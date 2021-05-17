@@ -1,5 +1,4 @@
 import { fieldValue, firebase } from '../lib/firebase'
-
 export async function doesUserNameExist(username){
     let result = await firebase.firestore()
         .collection('users')
@@ -46,4 +45,33 @@ export async function updateFollowerSuggestedUser(suggestedUserId, authUserId, f
         await firebase.firestore().collection('users').doc(suggestedUserId).update({
             follower : !followed ? fieldValue.arrayUnion(authUserId) : fieldValue.arrayRemove(authUserId)
         })
+}
+
+export async function getPhotos(authUserId, following){
+
+    const followingPhotos = await firebase.firestore().collection('photos').where("userId",  "in", following).get();
+
+
+    const userFollowingPhotosDetail = await Promise.all(followingPhotos.docs.map(async (photo) => {
+
+        const result = await firebase.firestore().collection('users').where("userId",  "==", photo.data().userId).get();
+
+        const username = result.docs.map(user => user.data().username)
+        
+        let isAuthUserLikedPhoto = false
+
+        if([photo.data().likes][0].includes(authUserId)){
+            isAuthUserLikedPhoto = true;
+        }
+
+        return{...photo.data(), photoId : photo.id, isUserLiked: isAuthUserLikedPhoto, username: username[0]};
+
+    }))
+
+    return userFollowingPhotosDetail;
+
+    // followingPhotos.docs.map(photo =>  console.log([photo.data().likes][0].includes(authUserId)))
+    // followingPhotos.docs.map(photo =>  console.log([photo.data().likes][0], authUserId))
+    
+
 }

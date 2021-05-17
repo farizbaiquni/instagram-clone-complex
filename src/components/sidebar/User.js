@@ -17,7 +17,7 @@ function user({username, fullName}) {
                             <img src={`./images/avatars/${username}.jpg`} alt="" className="rounded-full w-14"/>
                         </Link>
                         
-                        <div className="flex flex-col justify-center ml-3">
+                        <div className="flex flex-col justify-center">
                             <Link to={ROUTES.PROFILE} className="col-span-3">
                                 <h3 className="text-sm font-bold">{username}</h3>
                             </Link>
