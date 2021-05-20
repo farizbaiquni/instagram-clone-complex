@@ -9,7 +9,7 @@ function InputComment({photoId, commentInputRef, setComments, authUsername: disp
 
     const handlePostComment = async() => {
         let idComment = uuidv4()
-        setComments([{idComment, displayName, comment}, ...comments])
+        setComments([{ id: idComment, displayName, comment}, ...comments])
 
         await firebase.firestore().collection('photos').doc(photoId).update({
             comments: fieldValue.arrayUnion({
