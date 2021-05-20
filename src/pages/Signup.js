@@ -39,7 +39,7 @@ function login() {
                     emailAddress: email,
                     username: username,
                     fullName: fullName,
-                    dateCreate: Firebase.firestore.FieldValue.serverTimestamp(),
+                    dateCreate: new Date().getTime(),
                     followers: [],
                     following: [],
                 })

@@ -8,7 +8,7 @@ function Dashboard() {
     return (
         <div className="bg-gray-background">
             <Header/>
-            <div className="grid grid-cols-3 mx-auto gap-4 max-w-screen-lg">
+            <div className="grid grid-cols-3 mx-auto max-w-screen-lg">
                 <Timeline />
                 <Sidebar />
             </div>        

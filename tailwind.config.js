@@ -11,7 +11,8 @@ module.exports = {
     colors:{
       white : '#ffffff',
       blue: {
-        medium: '#005c98'
+        medium: '#005c98',
+        post: '#0095f6'
       },
       black: {
         light: '#005c98',
