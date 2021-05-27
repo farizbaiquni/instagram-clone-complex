@@ -9,9 +9,7 @@ import Comments from './Comments'
 
 
 function Post({content}) {
-
-    // console.log(content)
-
+    
     const commentInputRef = useRef (null)
     const handleFocusCommentInput =  () => commentInputRef.current.focus()
 

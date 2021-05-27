@@ -17,6 +17,8 @@ function usePhotos() {
             followingPhotos = followingPhotos.sort((a, b) => b.dateCreated - a.dateCreated)
             setPhotos(followingPhotos)
 
+        } else {
+            setPhotos([])
         }
 
     }, [authUserId])

@@ -12,7 +12,7 @@ function Header() {
     return (
         <header className="h-16 bg-white border-b border-gray-primary mb-8">
             <div className="container mx-auto max-w-screen-lg h-full">
-                <div className="flex justify-between h-full">
+                <div className="flex justify-between h-full ml-5 mr-5">
                     
                     <div className="text-gray-700 text-center flex items-center align-items">
                         <h1 className="flex justify-center w-full">
@@ -74,8 +74,8 @@ function Header() {
                                  </button>
 
                                  <div className="flex items-center cursor-pointer">
-                                     <Link to={`./p/${user?.username}`}>
-                                         <img src={`./images/avatars/${user?.displayName}.jpg`} 
+                                     <Link to={`./${user?.displayName}`}>
+                                         <img src={`/images/avatars/${user?.displayName}.jpg`} 
                                             alt={`${user?.displayName} profile`} 
                                             className="flex rounded-full w-8 h-8"/>
                                      </Link>

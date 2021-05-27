@@ -16,7 +16,8 @@ module.exports = {
       },
       black: {
         light: '#005c98',
-        primary: '#000000'
+        primary: '#000000',
+        faded: 'rgba(0,0,0,0.5)'
       },
       gray: {
         base: '#616161',
@@ -34,6 +35,12 @@ module.exports = {
       spacing: {
         'ig-photo-width': '614px',
         'ig-photo-height': '614px',
+        'header-profile-photo': '150px',
+        'header-profile-photo-sm': '80px',
+        'photos-collection' : "280px",
+        "one-hundred-percent" : "100%",
+        "fivety-percent" : "50%",
+        "minus-fivety-percent" : "-50%"
       }, 
 
       screens: {
@@ -51,8 +58,19 @@ module.exports = {
   
         'sm-max': {'max': '639px'},
         // => @media (max-width: 639px) { ... }
+      },
+
+      maxWidth: {
+        'header-profile': '614px',
+        'photos-collection' : "280px",
       }
-    }
+      ,
+      maxHeight: {
+        'photos-collection' : "280px",
+      },
+
+    }, 
+    
     
   },
   variants: {
